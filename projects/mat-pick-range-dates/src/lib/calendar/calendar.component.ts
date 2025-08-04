@@ -3,10 +3,11 @@ import { MatCalendar } from '@angular/material/datepicker';
 import { ConfigStoreService } from '../services/config-store.service';
 
 @Component({
-  selector: 'calendar',
-  templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'calendar',
+    templateUrl: './calendar.component.html',
+    styleUrls: ['./calendar.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class CalendarComponent implements OnChanges {
   @ViewChild(MatCalendar, { static: true }) matCalendar: MatCalendar<Date>;

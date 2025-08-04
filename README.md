@@ -1,8 +1,9 @@
 # MatPickRangeModule
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0 & npm 20.11.1
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.14 & npm 22.14.0
 Each version has oun branch on git
 
+- 19.2.14
 - 18.2.0
 - 17.3.0
 - 15.0.3
@@ -36,8 +37,8 @@ Please note and install the following peer dependencies necessary for Angular v1
 
 ```json
 "peerDependencies": {
-  "@angular/animations": "18.2.0",
-  "@angular/material": "18.2.0"
+  "@angular/animations": "19.2.14",
+  "@angular/material": "19.2.14"
 }
 .css
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";

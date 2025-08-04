@@ -8,10 +8,11 @@ import { ConfigStoreService } from '../services/config-store.service';
 import { RangeStoreService } from '../services/range-store.service';
 
 @Component({
-  selector: 'mat-pick-range',
-  templateUrl: './mat-pick-range.component.html',
-  providers: [CalendarOverlayService, RangeStoreService, ConfigStoreService, DatePipe],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'mat-pick-range',
+    templateUrl: './mat-pick-range.component.html',
+    providers: [CalendarOverlayService, RangeStoreService, ConfigStoreService, DatePipe],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class MatPickRangeComponent implements OnInit, OnDestroy {
   @ViewChild('calendarInput', { static: true }) calendarInput: ElementRef;
