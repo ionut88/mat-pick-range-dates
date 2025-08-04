@@ -1,6 +1,6 @@
 {
   "name": "mat-pick-range-dates",
-  "version": "19.2.14",
+  "version": "20.1.4",
   "description": "Angular 2 component range date picker.",
   "homepage": "https://github.com/ionut88/mat-pick-range-dates",
   "repository": {
@@ -21,8 +21,8 @@
     "mat-pick-range-dates"
   ],
   "peerDependencies": {
-    "@angular/common": "19.2.14",
-    "@angular/core": "19.2.14"
+    "@angular/common": "20.1.4",
+    "@angular/core": "20.1.4"
   },
   "dependencies": {
     "tslib": "2.3.0"
