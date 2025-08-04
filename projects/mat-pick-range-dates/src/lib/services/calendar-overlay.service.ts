@@ -1,5 +1,5 @@
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
-import { ComponentPortal, PortalInjector } from '@angular/cdk/portal';
+import { ComponentPortal } from '@angular/cdk/portal';
 import { ElementRef, Injectable, Injector } from '@angular/core';
 import { takeWhile } from 'rxjs/operators';
 import { CalendarOverlayConfig } from '../model/model';
@@ -16,7 +16,7 @@ const DEFAULT_CONFIG: CalendarOverlayConfig = {
 export class CalendarOverlayService {
   private hostElemRef: ElementRef;
 
-  constructor(private overlay: Overlay, private injector: Injector) {}
+  constructor(private readonly overlay: Overlay, private readonly injector: Injector) {}
 
   open(config: CalendarOverlayConfig = {}, hostElemRef: ElementRef): OverlayRef {
     this.hostElemRef = hostElemRef;
@@ -80,9 +80,8 @@ export class CalendarOverlayService {
     return overlayConfig;
   }
 
-  private createInjector(overlayRef: OverlayRef): PortalInjector {
-    const injectionTokens = new WeakMap();
-    injectionTokens.set(OverlayRef, overlayRef);
-    return new PortalInjector(this.injector, injectionTokens);
+  private createInjector(overlayRef: OverlayRef): Injector {
+    const options = { providers: [{ provide: OverlayRef, useValue: overlayRef }], parent: this.injector };
+    return Injector.create(options);
   }
 }
