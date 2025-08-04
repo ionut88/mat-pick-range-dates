@@ -5,11 +5,12 @@ import { ConfigStoreService } from '../services/config-store.service';
 import { RangeStoreService } from '../services/range-store.service';
 
 @Component({
-  selector: 'picker-overlay',
-  templateUrl: './picker-overlay.component.html',
-  styleUrls: ['./picker-overlay.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'picker-overlay',
+    templateUrl: './picker-overlay.component.html',
+    styleUrls: ['./picker-overlay.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PickerOverlayComponent implements OnInit {
   fromDate: Date;
